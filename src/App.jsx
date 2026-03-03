@@ -388,7 +388,7 @@ export default function DCEnergyDashboard() {
               background: "linear-gradient(135deg, #60A5FA 0%, #A78BFA 50%, #F472B6 100%)",
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             }}>
-              How Much of the Grid Do Data Centers Consume?
+              How much of the Grid capacity Do Data Centers Consume?
             </h1>
             <p style={{ fontSize: 13, color: "#9CA3AF", marginTop: 10, lineHeight: 1.6 }}>
               This dashboard tracks <span style={{ color: "#e5e7eb", fontWeight: 600 }}>data center electricity consumption as a percentage of total grid load</span> — from 2000 through 2050 forecasts. Drag the slider to travel through time. Click any region to drill down into countries, then into states.
