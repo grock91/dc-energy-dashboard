@@ -372,14 +372,14 @@ export default function DCEnergyDashboard() {
     }}>
       <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
-      {/* ─── HEADER ─── */}
+{/* ─── HEADER ─── */}
       <div style={{
         padding: "28px 32px 20px",
         borderBottom: "1px solid rgba(255,255,255,0.06)",
         background: "linear-gradient(180deg, rgba(59,130,246,0.04) 0%, transparent 100%)",
       }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 16 }}>
-          <div>
+          <div style={{ maxWidth: 620 }}>
             <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 11, letterSpacing: 3, color: "#6B7280", textTransform: "uppercase", marginBottom: 6 }}>
               Data Center Energy Observatory
             </div>
@@ -388,10 +388,21 @@ export default function DCEnergyDashboard() {
               background: "linear-gradient(135deg, #60A5FA 0%, #A78BFA 50%, #F472B6 100%)",
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
             }}>
-              Global DC Grid Load Share
+              How Much of the Grid Do Data Centers Consume?
             </h1>
-            <div style={{ fontSize: 12, color: "#6B7280", marginTop: 6 }}>
-              Data centers as percentage of total electricity consumption · Sources: IEA, EPRI, EIA, LBNL, Pew Research, Ember
+            <p style={{ fontSize: 13, color: "#9CA3AF", marginTop: 10, lineHeight: 1.6 }}>
+              This dashboard tracks <span style={{ color: "#e5e7eb", fontWeight: 600 }}>data center electricity consumption as a percentage of total grid load</span> — from 2000 through 2050 forecasts. Drag the slider to travel through time. Click any region to drill down into countries, then into states.
+            </p>
+            <div style={{
+              display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10,
+            }}>
+              {["IEA Energy & AI 2025", "EPRI", "US EIA", "LBNL", "Pew Research", "CSO Ireland", "Ember", "Wood Mackenzie"].map(s => (
+                <span key={s} style={{
+                  fontSize: 10, padding: "3px 8px", borderRadius: 4,
+                  background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)",
+                  color: "#6B7280", fontFamily: "'Space Mono', monospace",
+                }}>{s}</span>
+              ))}
             </div>
           </div>
 
